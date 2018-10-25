@@ -1,0 +1,5 @@
+***************** Remove null values from Response DTO *********************
+1. add on the top of dto class 
+@JsonInclude(Include.NON_NULL)
+2. add this lines to application.properties file
+#spring.jackson.default-property-inclusion=non-null
