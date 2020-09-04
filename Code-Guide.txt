@@ -3,3 +3,28 @@
 @JsonInclude(Include.NON_NULL)
 2. add this lines to application.properties file
 #spring.jackson.default-property-inclusion=non-null
+
+*****************add local jar in pom.xml*********************
+<repositories>
+		<repository>
+			<id>data-local</id>
+			<name>data</name>
+			<url>file://${project.basedir}/repo</url>
+		</repository>
+	</repositories>
+  
+  <!-- local ojdbc jar -->
+		<dependency>
+			<groupId>com.ojdbc.lois</groupId>
+			<artifactId>lois</artifactId>
+			<scope>system</scope>
+			<version>7</version>
+			<systemPath>${basedir}\lib\ojdbc7.jar</systemPath>
+		</dependency>
+***************** *********************
+***************** *********************
+***************** *********************
+***************** *********************
+***************** *********************
+***************** *********************
+
